@@ -1,0 +1,391 @@
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar {
+    background-color: blueviolet !important;
+    width: 100%;
+    z-index: 999;
+    margin: 0;
+}
+
+.navbar.sticky {
+    background-color: blueviolet;
+    position: fixed;
+    margin-top: -60px;
+}
+
+.nav-link {
+    color: white !important;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+    font-size: 25px !important;
+}
+
+.navbar .navbar-brand {
+    padding-left: 25px !important;
+}
+/* serach ber start here  */
+.search {
+	width: 40px;
+	height: 40px;
+    margin-right: 10px;
+	transform: 0.5s;
+	background: #fff;
+	overflow: hidden;
+	position: relative;
+	border-radius: 60px;
+	box-shadow: 0 0 0 0 5px blueviolet;
+}
+
+.search.active {
+	width: 250px;
+    transition: 0.2s ease-in-out;
+}
+
+.search .icon {
+	top: 1px;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	z-index: 1000;
+	cursor: pointer;
+	position: absolute;
+	background: #fff;
+	border-radius: 60px;
+	align-items: center;
+	justify-content: center;
+}
+
+.search .icon:before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	border-radius: 50%;
+	border: 3px solid blueviolet;
+	transform: translate(-4px, -4px);
+}
+
+.search .icon:after {
+	content: "";
+	width: 3px;
+	height: 12px;
+	position: absolute;
+	background: blueviolet;
+	transform: translate(6px, 6px) rotate(315deg);
+}
+
+.search .input {
+	left: 60px;
+	width: 300px;
+	height: 60px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+
+.search .input input {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	font-size: 18px;
+    padding-bottom: 20px;
+	position: absolute;
+}
+
+.clear {
+	top: 50%;
+	right: 15px;
+	width: 15px;
+	height: 15px;
+	display: flex;
+	cursor: pointer;
+	background: #ff0;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(-50%);
+}
+
+.clear:before {
+	width: 1px;
+	height: 15px;
+	content: "";
+	position: absolute;
+	background: #999;
+	transform: rotate(45deg);
+}
+
+.clear:after {
+	width: 1px;
+	height: 15px;
+	content: "";
+	position: absolute;
+	background: #999;
+	transform: rotate(315deg);
+}
+
+
+
+/* searchbar end here  */
+.home-component {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    z-index: -1;
+}
+
+.corona img {
+    width: 100px;
+    animation: coronaimg 2s linear infinite;
+}
+
+.right-content {
+    margin-top: 80px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes coronaimg {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.image-home img {
+    width: 300px;
+    animation: mainimg 5s linear infinite;
+}
+
+@keyframes mainimg {
+    0% {
+        transform: scale(0.75);
+    }
+    20% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(0.75);
+    }
+    60% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(0.75);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.right-head {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.second-row {
+    margin-top: 50px;
+}
+
+figcaption {
+    color: gray;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.head-2 {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.about-img img {
+    width: 450px;
+    margin-top: 50px;
+}
+
+.about-para {
+    font-size: 17px;
+    font-family: 'Mulish', sans-serif;
+}
+
+.head-4 {
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Mulish', sans-serif;
+}
+
+.livedata {
+    margin-top: 100px;
+}
+
+.para-5 {
+    text-align: start;
+}
+
+.prevention {
+    background-color: #f6f6f7;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.cold {
+    margin-top: 30px;
+}
+
+.next-row {
+    margin-top: 25px;
+}
+
+.livedata {
+    background-color: #f6f6f7;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    z-index: -111;
+}
+
+.navbar-toggler .fa {
+    color: white;
+    font-size: 25px;
+}
+
+.vacc-img img {
+    width: 440px;
+    border-radius: 25px;
+}
+
+.home-banner {
+    background-color: orangered;
+    height: 300px;
+    width: 100%;
+    z-index: -1000;
+    margin-top: -15px;
+}
+
+.head-10 {
+    color: white;
+    text-transform: uppercase;
+    padding-top: 100px;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: blueviolet;
+    height: 65px;
+}
+
+.copy {
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.mylink {
+    color: white;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.mylink:hover {
+    color: white;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+/* media query is start frorm here  */
+
+@media (max-width: 692px) {
+    .navbar .navbar-brand {
+        padding-left: 0px;
+    }
+    .about-img img {
+        width: 325px;
+        margin-top: 5px;
+        margin-bottom: 25px;
+    }
+    .second-row {
+        margin-top: 0px;
+    }
+    .cold {
+        margin-top: 0px !important;
+    }
+    .next-row {
+        margin-top: 0px;
+    }
+    .corona img {
+        width: 75px;
+        animation: coronaimg 2s linear infinite;
+    }
+    .right-head {
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .navbar-nav .nav-link {
+        padding-left: 30px !important;
+    }
+    .vacc-img img {
+        width: 320px;
+        border-radius: 25px;
+    }
+    .footer {
+        background-color: blueviolet;
+        height: 71px;
+    }
+    .search{
+        margin-left: 25px;
+    }
+}
+
+@media (min-width: 770px) {
+    .about-img img {
+        width: 260px;
+        margin-top: 175px;
+    }
+    .vacc-img img {
+        width: 330px;
+        border-radius: 25px;
+    }
+    .card {
+        height: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-img img {
+        width: 425px;
+        margin-top: 5px;
+        margin-bottom: 25px;
+    }
+    .vacc-img img {
+        width: 440px;
+        border-radius: 25px;
+    }
+    .card {
+        height: auto;
+    }
+}

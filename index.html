@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="animated.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="index.js"></script>
+    <title>Go-Corona | Get the daily updates of coorona ceses in India</title>
+</head>
+
+<body onload="fetch()">
+    <nav class="navbar navbar-expand-lg p-3 navigationbar">
+        <a class="navbar-brand" href="#">Go-Corona</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto pr-4">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#symptoms">Symptoms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#precation">Precaution</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#vacc">Vaccination</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <!-- searchbar start here  -->
+            <div class="search">
+                <div class="icon"></div>
+
+                <div class="input">
+                    <input type="text" placeholder="Search..." id="mysearch">
+                </div>
+
+                <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+            </div>
+            <!-- searchbar end from here  -->
+        </div>
+    </nav>
+    <section class="home-component">
+        <div class="container">
+            <div class="row w-100 h-100">
+                <div class="col-md-5 col-12 order-lg-1 order-2">
+                    <div class="image-home w-100 h-100 justify-content-center d-flex align-items-center wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s"">
+                        <img src="Images/Unity (1).png" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="col-md-7 col-12 order-lg-2 order-2">
+                    <div class="right-content wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s"" >
+                        <h1 class="right-head">Let's Stay Safe & Fight Together Against Cor <span class="corona"><img
+                                    src="Images/covid.png" alt="" srcset=""></span> na Virus</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="livedata">
+        <div class="container">
+            <h1 class="text-center head-4 mb-5 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s"">Get Live Update of COVID-19</h1>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped text-center p-2" id="tbval">
+                    <div id="myTable">
+                        <tr>
+                            <th>Country</th>
+                            <th>TotalConfirmed</th>
+                            <th>TotalRecoverd</th>
+                            <th>TotalDeath</th>
+                            <th>NewConfirmed</th>
+                            <th>NewRecoverd</th>
+                            <th>NewDetah</th>
+                        </tr>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <scetion class="about mt-5 mb-5" id="about">
+        <div class="container">
+            <h1 class="text-center mb-5 mt-5 head-4 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s"">About COVID-19</h1>
+            <div class="row">
+                <div class="col-md-5 text-center align-items-center justify-content-center">
+                    <div class="about-img wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"">
+                        <img src="Images/about.png" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="about-content wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"">
+                        <h3>What is COVID-19 (Corona-Virus)</h3>
+                        <p class="about-para mt-3">Coronavirus disease (COVID-19) is an infectious disease caused by a
+                            newly discovered
+                            coronavirus.</p>
+                        <p class="about-para">Most people infected with the COVID-19 virus will experience mild to
+                            moderate respiratory
+                            illness and recover without requiring special treatment. Older people, and those with
+                            underlying medical problems like cardiovascular disease, diabetes, chronic respiratory
+                            disease, and cancer are more likely to develop serious illness.</p>
+                        <p class="about-para">The best way to prevent and slow down transmission is to be well informed
+                            about the COVID-19
+                            virus, the disease it causes and how it spreads. Protect yourself and others from infection
+                            by washing your hands or using an alcohol based rub frequently and not touching your face.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </scetion>
+    <section class="symptoms mt-5" id="symptoms">
+        <div class="container">
+            <h1 class="text-center mb-5 head-2 bounceIn" data-wow-duration="1s" data-wow-delay="0.2s"">symptoms</h1>
+            <div class="row text-center align-items-center justify-content-center">
+                <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"">
+                    <figure>
+                        <img src="Images/fever.png" alt="" srcset="" width="150px">
+                        <figcaption>Fever</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s"">
+                    <figure>
+                        <img src="Images/breathing.png" alt="" srcset="" width="150px">
+                        <figcaption>Breathing</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s"">
+                    <figure>
+                        <img src="Images/cough.png" alt="" srcset="" width="150px">
+                        <figcaption>Cough</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 second-row wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"">
+                    <figure>
+                        <img src="Images/tirdeness.png" alt="" srcset="" width="150px">
+                        <figcaption>Tirdeness</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"">
+                    <figure>
+                        <img class=" cold" src="Images/cold.png" alt="" srcset="" width="150px">
+                        <figcaption>Coldness</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s"">
+                    <figure>
+                        <img class=" cold" src="Images/nose.png" alt="" srcset="" width="110px">
+                        <figcaption>Quarantine</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="prevention" id="precation">
+        <div class="container">
+            <h1 class="text-center font-weight-bold mt-5 mb-5 bounceIn" data-wow-duration="1s" data-wow-delay="0.2s"">Six Steps Prevention Against Coronavirus</h1>
+            <div class="row text-center align-items-center justify-content-center">
+                <div class="col-md-4 col-12 card pt-2 pb-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="Images/handwash.png" alt="" srcset="" width="110px">
+
+                            </figure>
+                        </div>
+
+                        <div class="col-md-8 col-12">
+                            <p class="mt-4 pl-4 para-5">Wash your hands regularly for 20 seconds with soap and water or
+                                alchohal-based handwash</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 card pt-3 pb-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" ">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="Images/mask.png" alt="" srcset="" width="105px">
+
+                            </figure>
+                        </div>
+
+                        <div class="col-md-8 col-12">
+                            <p class="mt-3">Cover Your nose and mouth with a disposable tissue or Good Quality like N-95
+                                mask</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 card pt-3 pb-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s"">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="Images/quarantine.png" alt="" srcset="" width="106px">
+
+                            </figure>
+                        </div>
+
+                        <div class="col-md-8 col-12">
+                            <p class="mt-3">Avoid close contacts (1 meter or 3 feet) with the people who are feeling npt
+                                well</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 next-row card pt-2 pb-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="Images/house.png" alt="" srcset="" width="110px">
+
+                            </figure>
+                        </div>
+
+                        <div class="col-md-8 col-12">
+                            <p class="mt-3">Stay home and self-Isolate from the others in the household if you are
+                                feeling not well</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 next-row card pt-2 pb-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s"">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="Images/news.png" alt="" srcset="" width="110px">
+
+                            </figure>
+                        </div>
+
+                        <div class="col-md-8 col-12">
+                            <p class="mt-3">Stay Informed by watching news & follow the recommended practices</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 next-row card pt-2 pb-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s"">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="Images/illness.png" alt="" srcset="" width="110px">
+
+                            </figure>
+                        </div>
+
+                        <div class="col-md-8 col-12">
+                            <p class="mt-3">If you have fever, cough and difficulty in breathing saakmedical care early
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <scetion class="vaccine" id="vacc">
+        <div class="container">
+            <h1 class="text-center mt-5 mb-5 wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s"">Getting vaccinated against COVID-19</h1>
+            <div class="row">
+                <div class="col-md-6 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"">
+                    <p class="about-para">Everyone over 18 will be invited to get vaccinated against COVID-19. Once you
+                        have received your
+                        invitation letter by post, you can contact your vaccination centre (municipal health service
+                        (GGD), family doctor or hospital). They will ask you a few questions about your health, and then
+                        arrange an appointment for your jab(s).</p>
+
+                    <p class="about-para">In the first place, vaccination protects you, but ultimately it also protects
+                        your family, friends and vulnerable people around you. The more people who get vaccinated, the
+                        harder it will be for the virus to spread. Then the government can scale down the coronavirus
+                        restrictions and we’ll get more and more of our freedom back.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="vacc-img align-items-center justify-content-center text-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"">
+                        <img src="Images/vaccine8.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </scetion>
+    <section class="contact" id="contact">
+        <div class="container">
+            <h1 class="text-center mt-5 mb-5">Feel Free to contact</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="contact.php" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="exampleInputPassword1"
+                                        placeholder="Email Id">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer mt-5">
+        <div class="container">
+            <p class="text-center pt-3 copy">Copyright &copy; 2021 | Go-Corona & Designed By <a class="mylink"
+                    href="https://sakshamportfolio.epizy.com/">SAKSHAM SINGH</a></p>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="animation.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        // Responsive navbar script code 
+        $(document).ready(function () {
+
+            $(window).scroll(function () {
+                // sticky navbar on scroll script
+                if (this.scrollY > 400) {
+                    $('.navbar').addClass("sticky");
+                } else {
+                    $('.navbar').removeClass("sticky");
+                }
+
+            });
+            ///filetring
+            $("#mysearch").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+        // searchbar script 
+        const icon = document.querySelector(".icon");
+        const search = document.querySelector(".search");
+
+        icon.onclick = function () {
+            search.classList.toggle("active");
+        };
+    </script>
+</body>
+
+</html>
